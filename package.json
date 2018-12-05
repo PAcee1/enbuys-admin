@@ -1,0 +1,8 @@
+{
+  "name": "enbuy-admin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:PAcee1/enbuys-admin.git",
+  "author": "Pace <8709867@qq.com>",
+  "license": "MIT"
+}
