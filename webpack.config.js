@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-05 15:50:19 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-05 17:31:31
+ * @Last Modified time: 2018-12-07 21:05:34
  */
 var webpack = require('webpack');
 const path = require('path');
@@ -17,6 +17,12 @@ module.exports = {
         path : path.resolve(__dirname,'dist'),
         publicPath : '/dist/', //devServer打包后路径前缀
         filename : 'js/app.js'
+    },
+    resolve : {
+        alias : {
+            page : path.resolve(__dirname,'src/page'),
+            componect : path.resolve(__dirname,'src/componect')
+        }
     },
     //模块设置
     module: {
@@ -83,7 +89,8 @@ module.exports = {
     plugins: [
         // html打包插件
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            template: './src/index.html',
+            favicon: './favicon.ico'
         }),
         // 单独处理css
         new ExtractTextPlugin("css/[name].css"),
@@ -94,6 +101,9 @@ module.exports = {
         })
     ],
     devServer: {
-        port : 8086
+        port : 8086,
+        historyApiFallback:{
+            index: '/dist/index.html'
+        }
     }
 };
