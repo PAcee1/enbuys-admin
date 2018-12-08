@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-07 16:02:55 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-07 20:44:25
+ * @Last Modified time: 2018-12-08 12:43:45
  */
 import React from 'react';
 import {Link,NavLink} from 'react-router-dom';
@@ -24,7 +24,7 @@ class SideNav extends React.Component{
                     </li>
                     <li className="active">
                         <Link to="/product">
-                            <i className="fa fa-sitemap"></i> 
+                            <i className="fa fa-barcode"></i> 
                             <span>商品</span>
                             <span className="fa arrow"></span>
                         </Link>
@@ -39,7 +39,7 @@ class SideNav extends React.Component{
                     </li>
                     <li className="active">
                         <NavLink to="/order" activeClassName="active-menu">
-                            <i className="fa fa-sitemap"></i> 
+                            <i className="fa fa-check-square-o"></i> 
                             <span>订单</span>
                             <span className="fa arrow"></span>
                         </NavLink>
@@ -51,7 +51,7 @@ class SideNav extends React.Component{
                     </li>
                     <li className="active">
                         <Link to="/user">
-                            <i className="fa fa-sitemap"></i> 
+                            <i className="fa fa-user-circle-o"></i> 
                             <span>用户</span>
                             <span className="fa arrow"></span>
                         </Link>

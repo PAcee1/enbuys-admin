@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-05 15:50:19 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-07 21:05:34
+ * @Last Modified time: 2018-12-08 11:29:00
  */
 var webpack = require('webpack');
 const path = require('path');
@@ -21,7 +21,9 @@ module.exports = {
     resolve : {
         alias : {
             page : path.resolve(__dirname,'src/page'),
-            componect : path.resolve(__dirname,'src/componect')
+            componect : path.resolve(__dirname,'src/componect'),
+            service : path.resolve(__dirname,'src/service'),
+            util : __dirname + '/src/util'
         }
     },
     //模块设置
@@ -104,6 +106,16 @@ module.exports = {
         port : 8086,
         historyApiFallback:{
             index: '/dist/index.html'
+        },
+        proxy : {
+            '/manage' : {
+                target : 'http://localhost:8081',
+                changeOrigin : true
+            },
+            '/myUser/logout.do' : {
+                target : 'http://localhost:8081',
+                changeOrigin : true
+            }
         }
     }
 };
