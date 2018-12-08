@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-05 15:52:57 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-08 13:36:39
+ * @Last Modified time: 2018-12-09 00:51:07
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -17,14 +17,16 @@ import Login from 'page/login/index.jsx';
 import UserList from 'page/user/index.jsx';
 //error组件
 import ErrorPage from 'page/error/index.jsx';
+import ProductRouter from 'page/product/router.jsx';
 
 class App extends React.Component{
     render(){
+        //设置路由，根据url路径的不同，往主页面body中添加内容
         let LayoutRouter=(
-            <Layout >
+            <Layout > 
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route  path="/product" component={Home}/>
+                    <Route  path="/product" component={ProductRouter}/>
                     <Route  path="/product-category" component={Home}/>
                     <Route path="/user/index" component={UserList}/>
                     <Redirect exact from="/user" to="/user/index" />

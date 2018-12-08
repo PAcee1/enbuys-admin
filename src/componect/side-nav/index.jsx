@@ -2,11 +2,12 @@
  * @Author: Pace 
  * @Date: 2018-12-07 16:02:55 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-08 12:43:45
+ * @Last Modified time: 2018-12-09 00:56:41
  */
 import React from 'react';
 import {Link,NavLink} from 'react-router-dom';
 
+// 侧边栏导航
 class SideNav extends React.Component{
     constructor(props){
         super(props);

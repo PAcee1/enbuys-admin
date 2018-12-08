@@ -2,10 +2,11 @@
  * @Author: Pace 
  * @Date: 2018-12-07 20:30:18 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-08 11:52:11
+ * @Last Modified time: 2018-12-09 00:56:42
  */
 import React from 'react';
 
+// body中的title
 class PageTitle extends React.Component{
     constructor(props){
         super(props);

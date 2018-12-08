@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-07 16:02:58 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-08 12:44:06
+ * @Last Modified time: 2018-12-09 00:56:39
  */
 import React from 'react';
 import EBUtil from 'util/eb.jsx'
@@ -12,6 +12,7 @@ import {Link} from 'react-router-dom';
 const _eb = new EBUtil();
 const _user = new User();
 
+// 头部导航
 class TopNav extends React.Component{
     constructor(props){
         super(props);

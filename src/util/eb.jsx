@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-07 21:06:37 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-08 11:23:57
+ * @Last Modified time: 2018-12-08 19:55:39
  */
 
 class EBUtil{
@@ -44,6 +44,10 @@ class EBUtil{
             reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"), // 匹配&与name=，获取后面的值
             result = queryString.match(reg);
         return result ? decodeURIComponent(result[2]) : null;
+    }
+    //成功提示
+    successTips(successMsg){
+        alert(successMsg || '操作成功');
     }
     //错误提示
     errorTips(errMsg){
