@@ -2,17 +2,17 @@
  * @Author: Pace 
  * @Date: 2018-12-08 16:30:18 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-08 22:04:26
+ * @Last Modified time: 2018-12-09 22:49:21
  */
 import React from 'react';
 import './index.scss';
 import PageTitle from 'componect/page-title/index.jsx';
-import Pagination from 'util/pagination/index.jsx'
+import Pagination from 'util/pagination/index.jsx';
 import {Link} from 'react-router-dom';
-import EBUtil from 'util/eb.jsx'
-import Product from 'service/product-service.jsx'
-import ListSearch from './index-list-search.jsx'
-import TableList from 'util/table-list/index.jsx'
+import EBUtil from 'util/eb.jsx';
+import Product from 'service/product-service.jsx';
+import ListSearch from './index-list-search.jsx';
+import TableList from 'util/table-list/index.jsx';
 
 const _eb = new EBUtil();
 const _product = new Product();
@@ -114,7 +114,14 @@ class ProductList extends React.Component{
         ];
         return (
             <div className="myProduct" id="page-wrapper">
-                <PageTitle title="商品列表"/>
+                <PageTitle title="商品列表">
+                    <div className="page-header-right">
+                        <Link to="/product/save" className="btn btn-info" style={{width:'130px'}}>
+                            <i className="fa fa-plus"></i>
+                            <span>添加商品</span>
+                        </Link>
+                    </div>
+                </PageTitle>
                 <ListSearch onSearch={(searchType,searchKeyword)=>this.onSearch(searchType,searchKeyword)}/>
                 <TableList tableHeads={tableHeads}>
                 {
@@ -156,7 +163,7 @@ class ProductList extends React.Component{
                                     <span className="oper-item btn btn-info"
                                         >详情</span>
                                     </Link>
-                                    <Link to={`/product/edit/${product.id}`}>
+                                    <Link to={`/product/save/${product.id}`}>
                                     <span className="oper-item btn btn-info" 
                                         >编辑</span>
                                     </Link>
