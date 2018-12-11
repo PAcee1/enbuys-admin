@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-09 10:46:49 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-09 23:32:42
+ * @Last Modified time: 2018-12-11 09:49:51
  */
 import React from 'react';
 import CategorySelector from './category-selector.jsx';
@@ -135,7 +135,7 @@ class ProductSave extends React.Component{
     render(){
         return (
             <div className="myProduct" id="page-wrapper">
-                <PageTitle title="添加商品" />
+                <PageTitle title={this.state.id ? '编辑商品': '添加商品'}/>
                 <div className="form-horizontal form-horizontal-primary">
                     <div className="form-group">
                         <label  className="col-md-2 control-label">商品名称</label>

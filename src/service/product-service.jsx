@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-08 16:37:10 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-09 22:48:14
+ * @Last Modified time: 2018-12-11 11:35:33
  */
 import EBUtil from 'util/eb.jsx'
 const _eb = new EBUtil();
@@ -106,6 +106,22 @@ class Product{
             data : {
                 categoryId : parentCategoryId
             }
+        });
+    }
+    //新增品类列表
+    saveCategory(category){
+        return _eb.request({
+            type : 'post',
+            url : '/manage/category/addCategory.do',
+            data : category
+        });
+    }
+    // 修改品类名称
+    updateCategoryName(category){
+        return _eb.request({
+            type : 'post',
+            url : '/manage/category/setCategoryName.do',
+            data : category
         });
     }
 }

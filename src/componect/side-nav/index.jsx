@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-07 16:02:55 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-09 00:56:41
+ * @Last Modified time: 2018-12-11 10:29:50
  */
 import React from 'react';
 import {Link,NavLink} from 'react-router-dom';
@@ -39,7 +39,7 @@ class SideNav extends React.Component{
                         </ul>
                     </li>
                     <li className="active">
-                        <NavLink to="/order" activeClassName="active-menu">
+                        <NavLink to="/order" >
                             <i className="fa fa-check-square-o"></i> 
                             <span>订单</span>
                             <span className="fa arrow"></span>

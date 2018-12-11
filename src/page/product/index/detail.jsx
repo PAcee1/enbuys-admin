@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-09 23:36:34 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-10 00:01:11
+ * @Last Modified time: 2018-12-11 09:50:10
  */
 import React from 'react';
 import CategorySelector from './category-selector.jsx';
@@ -56,7 +56,7 @@ class ProductDetail extends React.Component{
     render(){
         return (
             <div className="myProduct" id="page-wrapper">
-                <PageTitle title="添加商品" />
+                <PageTitle title="商品详情" />
                 <div className="form-horizontal form-horizontal-primary">
                     <div className="form-group">
                         <label  className="col-md-2 control-label">商品名称</label>

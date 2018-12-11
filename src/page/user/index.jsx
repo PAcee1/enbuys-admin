@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-08 13:36:16 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-08 20:48:26
+ * @Last Modified time: 2018-12-11 10:15:18
  */
 
 import React from 'react';
@@ -66,9 +66,9 @@ class UserList extends React.Component{
                     <td>{user.phone}</td>
                     <td>{new Date(user.createTime).toLocaleString()}</td>
                     <td>
-                    <div class="oper-wrapper">
-                        <span class="oper-item btn btn-info">详情</span>
-                        <span class="oper-item btn btn-info">操作</span>
+                    <div className="oper-wrapper">
+                        <span className="oper-item btn btn-info">详情</span>
+                        <span className="oper-item btn btn-info">操作</span>
                     </div>
                     </td>
                     
