@@ -2,12 +2,16 @@
  * @Author: Pace 
  * @Date: 2018-12-05 15:50:19 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-08 11:29:00
+ * @Last Modified time: 2018-12-14 19:05:07
  */
 var webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin   = require('extract-text-webpack-plugin');
+
+//环境变量配置，dev / online
+var WEBPACK_ENV = process.env.WEBPACK_ENV || 'dev';
+console.log(WEBPACK_ENV);
 
 module.exports = {
     // 入口
@@ -15,7 +19,7 @@ module.exports = {
     // 出口
     output : {
         path : path.resolve(__dirname,'dist'),
-        publicPath : '/dist/', //devServer打包后路径前缀
+        publicPath : 1 == WEBPACK_ENV ? '/dist/' : '//s.enbuys.com/admin-ve-fe/dist/', //devServer打包后路径前缀
         filename : 'js/app.js'
     },
     resolve : {
@@ -109,11 +113,12 @@ module.exports = {
         },
         proxy : {
             '/manage' : {
-                target : 'http://localhost:8081',
+                //target : 'http://localhost:8081',
+                target : 'http://admin.enbuys.com',
                 changeOrigin : true
             },
             '/myUser/logout.do' : {
-                target : 'http://localhost:8081',
+                target : 'http://admin.enbuys.com',
                 changeOrigin : true
             }
         }

@@ -6,7 +6,8 @@
   "author": "Pace <8709867@qq.com>",
   "scripts": {
     "dev": "node_modules/.bin/webpack-dev-server",
-    "dist": "node_modules/.bin/webpack -p"
+    "dist"      : "WEBPACK_ENV=online node_modules/.bin/webpack -p",
+    "dist_win"  : "set WEBPACK_ENV=online&& node_modules/.bin/webpack -p"
   },
   "license": "MIT",
   "devDependencies": {
