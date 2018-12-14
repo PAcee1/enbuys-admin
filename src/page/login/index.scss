@@ -1,0 +1,56 @@
+/*
+ * @Author: Pace 
+ * @Date: 2018-12-08 08:53:56 
+ * @Last Modified by: Pace
+ * @Last Modified time: 2018-12-08 09:24:49
+ */
+// .login-panel{
+//     margin-top: 25%;
+// }
+.login-main{
+    width: 400px;
+    margin-left: 36%;
+}
+.login-logo{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 300;
+    margin-top: 26%;
+}
+.login-logo a {
+    color: #888;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.login-logo a b {
+    font-size: 50px;
+}
+
+b, strong {
+    font-weight: 700;
+}
+.login-logo .sub-title {
+    font-size: 17px;
+    margin-top: -15px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.panel.panel-default.login-panel .panel-body {
+    border: 1px solid #f0f0f0;
+}
+.panel.panel-default.login-panel .panel-body  .login-box-msg {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    color: #888;
+    margin-bottom: 15px;
+}
+.has-feedback {
+    position: relative;
+}
+.form-control-feedback {
+    color: #777;
+}

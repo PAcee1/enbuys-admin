@@ -1,0 +1,29 @@
+/*
+ * @Author: Pace 
+ * @Date: 2018-12-11 10:10:33 
+ * @Last Modified by: Pace
+ * @Last Modified time: 2018-12-11 16:43:32
+ */
+ .category {
+     margin-bottom: 10px;
+    
+ }
+ #page-wrapper{
+
+    .link {
+        color: #f39c12;
+        cursor: pointer;
+        word-break: keep-all;
+        text-decoration: none;
+        margin-left: 10px;
+    }
+}
+.page-header-right{
+    position: absolute;
+    right: 15px;
+    top:-15px;
+}
+.form-horizontal .form-group {
+    margin-right: -15px;
+    margin-left: 50px;
+}
