@@ -2,7 +2,7 @@
  * @Author: Pace 
  * @Date: 2018-12-05 15:50:19 
  * @Last Modified by: Pace
- * @Last Modified time: 2018-12-14 19:05:07
+ * @Last Modified time: 2018-12-14 19:06:46
  */
 var webpack = require('webpack');
 const path = require('path');
@@ -19,7 +19,7 @@ module.exports = {
     // 出口
     output : {
         path : path.resolve(__dirname,'dist'),
-        publicPath : 1 == WEBPACK_ENV ? '/dist/' : '//s.enbuys.com/admin-ve-fe/dist/', //devServer打包后路径前缀
+        publicPath : 'dev' == WEBPACK_ENV ? '/dist/' : '//s.enbuys.com/admin-ve-fe/dist/', //devServer打包后路径前缀
         filename : 'js/app.js'
     },
     resolve : {
